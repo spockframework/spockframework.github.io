@@ -6,6 +6,20 @@ Spock is a testing and specification framework for Java and Groovy applications.
 
 Read ten reasons why Spock is for you, run your first spec in [Spock Web Console](http://meetspock.appspot.com/?id=9001), fork the [spock-example](https://github.com/spockframework/spock-example) project, learn how to write a specification, or dive into the [reference documentation](http://docs.spockframework.org).
 
+## Install
+
+### with Gradle
+
+    testCompile "org.spockframework:spock-core:1.1-groovy-2.4-rc-2"
+
+### with Maven:
+
+    <dependency>
+      <groupId>org.spockframework</groupId>
+      <artifactId>spock-core</artifactId>
+      <version>1.1-groovy-2.4-rc-2</version>
+    </dependency>
+
 ## Where Are The Docs?
 
 * Reference Documentation: http://docs.spockframework.org
