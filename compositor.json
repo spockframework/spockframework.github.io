@@ -139,11 +139,11 @@
           "text": "Issues"
         },
         {
-          "href": "https://forum.spockframework.org/",
+          "href": "http://forum.spockframework.org/",
           "text": "Forum"
         },
         {
-          "href": "https://docs.spockframework.org/",
+          "href": "http://docs.spockframework.org/",
           "text": "Documentation"
         }
       ],
