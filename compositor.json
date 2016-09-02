@@ -89,15 +89,6 @@
   },
   "content": [
     {
-      "component": "nav",
-      "links": [
-        {
-          "href": "https://github.com/spockframework/spockframework.github.io",
-          "text": "GitHub"
-        }
-      ]
-    },
-    {
       "component": "header",
       "heading": "Spock",
       "subhead": "the enterprise ready specification framework",
@@ -140,14 +131,23 @@
       "component": "footer",
       "links": [
         {
-          "href": "https://github.com/spockframework/spockframework.github.io",
+          "href": "https://github.com/spockframework/spock",
           "text": "GitHub"
         },
         {
-          "href": "https://github.com/spockframework",
-          "text": "spockframework"
+          "href": "https://github.com/spockframework/spock/issues",
+          "text": "Issues"
+        },
+        {
+          "href": "https://forum.spockframework.org/",
+          "text": "Forum"
+        },
+        {
+          "href": "https://docs.spockframework.org/",
+          "text": "Documentation"
         }
-      ]
+      ],
+      "heading": ""
     }
   ]
 }
