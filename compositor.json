@@ -1,0 +1,138 @@
+{
+  "name": "spockframework/spockframework.github.io",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.21"
+  },
+  "title": "Spock",
+  "branch": "",
+  "style": {
+    "name": "Default",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "fontWeight": 400,
+    "bold": 600,
+    "lineHeight": 1.5,
+    "typeScale": [
+      72,
+      48,
+      24,
+      20,
+      16,
+      14,
+      12
+    ],
+    "monospace": "Menlo, monospace",
+    "heading": {
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontWeight": 600,
+      "lineHeight": 1.25,
+      "textTransform": null,
+      "letterSpacing": null,
+      "h0": {},
+      "h1": {},
+      "h2": {},
+      "h3": {},
+      "h4": {},
+      "h5": {},
+      "h6": {}
+    },
+    "alternativeText": {},
+    "space": [
+      0,
+      8,
+      16,
+      32,
+      48,
+      64,
+      96
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "centered": false
+    },
+    "colors": {
+      "text": "#111",
+      "background": "#fff",
+      "primary": "#08e",
+      "secondary": "#059",
+      "highlight": "#e08",
+      "border": "#ddd",
+      "muted": "#eee"
+    },
+    "border": {
+      "width": 1,
+      "radius": 2
+    },
+    "link": {},
+    "button": {
+      "hover": {
+        "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .125)"
+      }
+    },
+    "input": {},
+    "body": {
+      "margin": 0
+    },
+    "breakpoints": {
+      "xs": "@media screen and (max-width:40em)",
+      "sm": "@media screen and (min-width:40em)",
+      "md": "@media screen and (min-width:52em)",
+      "lg": "@media screen and (min-width:64em)"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/spockframework/spockframework.github.io",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "spockframework.github.io",
+      "subhead": "Spock project homepage",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "spockframework.github.io: Spock project homepage",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "spockframework",
+          "repo": "spockframework.github.io"
+        }
+      ]
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<h1>Spock</h1>\n<p>the enterprise ready specification framework</p>\n<ul>\n<li><a href=\"Source\">http://github.spockframework.org</a></li>\n<li><a href=\"Issues\">http://issues.spockframework.org/</a></li>\n<li><a href=\"Forum\">http://forum.spockframework.org/</a></li>\n</ul>\n<h2>What is it?</h2>\n<p>Spock is a testing and specification framework for Java and Groovy applications. What makes it stand out from the crowd is its beautiful and highly expressive specification language. Thanks to its JUnit runner, Spock is compatible with most IDEs, build tools, and continuous integration servers. Spock is inspired from <a href=\"JUnit\">http://www.junit.org/</a>, <a href=\"RSpec\">http://rspec.info/</a>, <a href=\"jMock\">http://www.jmock.org/</a>, <a href=\"Mockito\">http://www.mockito.org</a>, <a href=\"Groovy\">http://groovy.codehaus.org/</a>, <a href=\"Scala\">http://www.scala-lang.org/</a>, <a href=\"Vulcans\">http://en.wikipedia.org/wiki/Vulcans</a>, and other fascinating life forms.</p>\n<h2>How Do I Get Started?</h2>\n<p>Read ten reasons why Spock is for you, run your first spec in <a href=\"Spock Web Console\">http://meetspock.appspot.com/?id=9001</a>, fork the <a href=\"spock-example\">https://github.com/spockframework/spock-example</a> project, learn how to write a specification, or dive into the <a href=\"reference documentation\">http://docs.spockframework.org</a>.</p>\n<h2>Where Are The Docs?</h2>\n<ul>\n<li>Reference Documentation: [<a href=\"http://docs.spockframework.org\">http://docs.spockframework.org</a>]</li>\n<li>Wiki (old): [<a href=\"http://wiki.spockframework.org\">http://wiki.spockframework.org</a>]</li>\n<li>Javadoc: [<a href=\"http://javadoc.spockframework.org/latest\">http://javadoc.spockframework.org/latest</a>]</li>\n</ul>\n<h2>How Can I Get Involved?</h2>\n<ul>\n<li>Source Code: [<a href=\"http://github.spockframework.org\">http://github.spockframework.org</a>]</li>\n<li>Issue Tracker: [<a href=\"http://issues.spockframework.org\">http://issues.spockframework.org</a>]</li>\n<li>Discussion Forum: [<a href=\"http://forum.spockframework.org\">http://forum.spockframework.org</a>]</li>\n<li>Continuous Build: [<a href=\"http://builds.spockframework.org\">http://builds.spockframework.org</a>]</li>\n</ul>\n<h3>Supporters</h3>\n<p>Thanks to JetBrains for providing <a href=\"IDEA\">http://www.jetbrains.com/idea/</a> and <a href=\"TeamCity\">http://www.jetbrains.com/teamcity/</a> licenses.</p>\n<p>YourKit is kindly supporting open source projects with its full-featured Java Profiler.</p>\n<p>YourKit, LLC is the creator of innovative and intelligent tools for profiling\nJava and .NET applications. Take a look at YourKit&apos;s leading software products:\n<a href=\"YourKit Java Profiler\">http://www.yourkit.com/java/profiler/index.jsp</a> and\n<a href=\"YourKit .NET Profiler\">http://www.yourkit.com/.net/profiler/index.jsp</a>.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/spockframework/spockframework.github.io",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/spockframework",
+          "text": "spockframework"
+        }
+      ]
+    }
+  ]
+}
