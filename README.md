@@ -1,11 +1,3 @@
-# Spock
-
-the enterprise ready specification framework
-
-* [Source](http://github.spockframework.org)
-* [Issues](http://issues.spockframework.org/)
-* [Forum](http://forum.spockframework.org/)
-
 ## What is it?
 
 Spock is a testing and specification framework for Java and Groovy applications. What makes it stand out from the crowd is its beautiful and highly expressive specification language. Thanks to its JUnit runner, Spock is compatible with most IDEs, build tools, and continuous integration servers. Spock is inspired from [JUnit](http://www.junit.org/), [RSpec](http://rspec.info/), [jMock](http://www.jmock.org/), [Mockito](http://www.mockito.org), [Groovy](http://groovy.codehaus.org/), [Scala](http://www.scala-lang.org/), [Vulcans](http://en.wikipedia.org/wiki/Vulcans), and other fascinating life forms.
