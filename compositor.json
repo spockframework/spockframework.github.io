@@ -99,8 +99,8 @@
     },
     {
       "component": "header",
-      "heading": "spockframework.github.io",
-      "subhead": "Spock project homepage",
+      "heading": "Spock",
+      "subhead": "the enterprise ready specification framework",
       "children": [
         {
           "component": "ui/TweetButton",
@@ -112,7 +112,22 @@
           "user": "spockframework",
           "repo": "spockframework.github.io"
         }
-      ]
+      ],
+      "links": [
+        {
+          "href": "http://github.spockframework.org",
+          "text": "Source"
+        },
+        {
+          "href": "http://issues.spockframework.org/",
+          "text": "Issues"
+        },
+        {
+          "href": "http://forum.spockframework.org/",
+          "text": "Forum"
+        }
+      ],
+      "slug": ""
     },
     {
       "component": "article",
