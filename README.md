@@ -18,6 +18,7 @@ Read ten reasons why Spock is for you, run your first spec in [Spock Web Console
       <groupId>org.spockframework</groupId>
       <artifactId>spock-core</artifactId>
       <version>1.1-groovy-2.4-rc-2</version>
+      <scope>test</scope>
     </dependency>
 
 ## Where Are The Docs?
