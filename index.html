@@ -153,15 +153,10 @@
         }
 
         /* Additional Links Separator */
-        .link-separator::after {
-            content: '|';
+        .link-separator {
             margin-left: 0.75rem; /* mx-3 */
             margin-right: 0.75rem; /* mx-3 */
             color: #4b5563; /* gray-600 */
-        }
-        .additional-links a:last-child .link-separator::after {
-            content: ''; /* Don't show separator after the last link */
-            margin: 0;
         }
     </style>
 </head>
@@ -207,11 +202,11 @@
         </div>
     </div>
     <div class="container mx-auto px-6 text-center spock-blue-text text-md additional-links flex flex-wrap justify-center items-center gap-y-2 pt-8">
-        <a href="https://spockframework.org/spock/javadoc/current" class="mx-3"><span class="link-separator">JavaDoc</span></a>
-        <a href="https://github.com/spockframework/spock" class="mx-3"><span class="link-separator">Source Code</span></a>
-        <a href="https://github.com/spockframework/spock/issues" class="mx-3"><span class="link-separator">Issue Tracker</span></a>
-        <a href="https://github.com/spockframework/spock/discussions" class="mx-3"><span class="link-separator">Discussions</span></a>
-        <a href="https://gitter.im/spockframework/spock" class="mx-3"><span class="link-separator">Chat</span></a>
+        <a href="https://spockframework.org/spock/javadoc/current" class="mx-3 hover-underline-animation">JavaDoc</a> <span class="link-separator">|</span>
+        <a href="https://github.com/spockframework/spock" class="mx-3 hover-underline-animation">Source Code</a> <span class="link-separator">|</span>
+        <a href="https://github.com/spockframework/spock/issues" class="mx-3 hover-underline-animation">Issue Tracker</a> <span class="link-separator">|</span>
+        <a href="https://github.com/spockframework/spock/discussions" class="mx-3 hover-underline-animation">Discussions</a> <span class="link-separator">|</span>
+        <a href="https://gitter.im/spockframework/spock" class="mx-3 hover-underline-animation">Chat</a>
     </div>
 </section>
 
