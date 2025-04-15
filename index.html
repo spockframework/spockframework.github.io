@@ -168,8 +168,7 @@
             <img
                 src="spock-main-logo.svg"
                 alt="Spock Framework Logo"
-                class="h-64 w-auto mx-auto block logo-img"
-            >
+                class="h-64 w-auto mx-auto block logo-img">
         </div>
 
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 spock-blue-text">
@@ -193,7 +192,7 @@
             <a href="https://groovyconsole.dev/?g=groovy_4_0&gist=437e9026ff86d2d709c2c56eb7e2eef1#g8qcDpYAQE" target="_blank" class="cta-button cta-primary">
                 Try it online
             </a>
-            <a href="http://docs.spockframework.org" target="_blank" class="cta-button cta-secondary">
+            <a href="https://docs.spockframework.org" target="_blank" class="cta-button cta-secondary">
                 Read the Docs
             </a>
             <a href="https://github.com/spockframework/spock-example" target="_blank" class="cta-button cta-tertiary">
@@ -251,11 +250,12 @@
     </div>
 </section>
 
-<section class="py-16 md:py-24"> <div class="container mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-100" data-aos="fade-up">
-        See How Readable Tests Can Be
-    </h2>
-    <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+<section class="py-16 md:py-24">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-100" data-aos="fade-up">
+            See How Readable Tests Can Be
+        </h2>
+        <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
             <pre><code class="language-groovy"><span class="comment">// CalculatorSpec.groovy</span>
 <span class="keyword">import</span> spock.lang.Specification
 
@@ -265,7 +265,7 @@
         <span class="keyword">given:</span> <span class="comment">"A calculator instance"</span>
         <span class="keyword">def</span> calculator = <span class="keyword">new</span> <span class="class-name">Calculator</span>()
 
-        <span class="keyword">expect:</span> <span class="comment">"The calculation should match the expected value"</span> <span class="comment">// Changed from when/then</span>
+        <span class="keyword">expect:</span> <span class="comment">"The calculation should match the expected value"</span>
         calculator.calculate(a, b, operation) == expectedResult
 
         <span class="keyword">where:</span> <span class="comment">"Define test data"</span>
@@ -375,8 +375,6 @@
                 Try it online
             </a>
         </div>
-    </div>
-</div>
 </section>
 
 <footer class="py-8 text-center text-gray-400 text-sm">
