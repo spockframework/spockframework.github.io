@@ -144,6 +144,14 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
         }
 
+        .feature-card svg {
+            height: 40px;
+            margin-bottom: 1rem;
+            fill: none;
+            stroke: var(--spock-blue);
+            stroke-width: 2;
+        }
+
         /* Additional Links Separator */
         .link-separator::after {
             content: '|';
@@ -170,90 +178,20 @@
         </div>
 
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 spock-blue-text" data-aos="fade-up">
-            Write Beautiful & Expressive Tests
+            Spock
         </h1>
-        <p class="text-xl md:text-2xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="100">
-            Spock: The highly practical testing framework for Java and Groovy applications.
-        </p>
         <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-12" data-aos="fade-up" data-aos-delay="200">
-            Spock combines the power of Behavior-Driven Development (BDD) with an elegant Groovy-based syntax.
-            Write tests that are not only powerful but also highly readable and maintainable, making collaboration easier and development faster.
+            Spock is a testing, specification, and mocking framework for JVM developers that emphasizes readability and clarity.
+            By blending BDD concepts and Groovy's concise syntax, Spock helps teams write tests that are not only easy to understand but also enjoyable to maintain.
         </p>
-    </div>
-</section>
-
-<section class="py-16 md:py-24">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-100" data-aos="fade-up">
-            See How Readable Tests Can Be
-        </h2>
-        <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                <pre><code class="language-groovy"><span class="keyword">import</span> spock.lang.*
-
-<span class="keyword">class</span> <span class="class-name">MathSpec</span> <span class="keyword">extends</span> <span class="class-name">Specification</span> {
-
-    <span class="class-name">def</span> <span class="string">"should add two numbers correctly"</span>() {
-        <span class="keyword">given:</span> <span class="string">"Setup preconditions"</span>
-        <span class="class-name">int</span> a = <span class="number">5</span>
-        <span class="class-name">int</span> b = <span class="number">3</span>
-
-        <span class="keyword">when:</span> <span class="string">"Perform the action under test"</span>
-        <span class="class-name">int</span> result = a + b
-
-        <span class="keyword">then:</span> <span class="string">"Assert the expected outcome"</span>
-        result == <span class="number">8</span>
-    }
-}
-</code></pre>
-            <p class="text-center text-gray-400 mt-6" data-aos="fade-up" data-aos-delay="200">
-                Spock's clear <code class="inline-code">given:</code>, <code class="inline-code">when:</code>, <code class="inline-code">then:</code> blocks make understanding test logic intuitive.
-            </p>
-        </div>
-    </div>
-</section>
-
-<section class="py-16 md:py-24 bg-gray-800">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-100" data-aos="fade-up">
-            Why Choose Spock?
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-xl font-semibold text-gray-100 mb-2">Expressive Specifications</h3>
-                <p class="text-gray-300">Write tests that are easy to read and understand, even for non-programmers.</p>
-            </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
-                <h3 class="text-xl font-semibold text-gray-100 mb-2">Powerful Mocking</h3>
-                <p class="text-gray-300">Create flexible and powerful mocks and stubs with built-in support.</p>
-            </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-xl font-semibold text-gray-100 mb-2">JUnit Runner</h3>
-                <p class="text-gray-300">Seamless integration with JUnit runners and build tools.</p>
-            </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
-                <h3 class="text-xl font-semibold text-gray-100 mb-2">Data-Driven Testing</h3>
-                <p class="text-gray-300">Easily run the same test with different sets of data.</p>
-            </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="text-xl font-semibold text-gray-100 mb-2">Groovy DSL</h3>
-                <p class="text-gray-300">Leverage the power and flexibility of the Groovy language.</p>
-            </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="350">
-                <h3 class="text-xl font-semibold text-gray-100 mb-2">Built-in Matchers</h3>
-                <p class="text-gray-300">Use a rich set of matchers to verify expectations with clarity.</p>
-            </div>
-        </div>
     </div>
 </section>
 
 <section class="py-16 md:py-24"> <div class="container mx-auto px-6 text-center">
     <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-100" data-aos="fade-up">Ready to Improve Your Testing?</h2>
-    <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-        Explore the documentation, check out examples, or get started right away.
-    </p>
 
     <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="200">
-        <a href="https://groovyconsole.dev/?github=spockframework/spock/blob/6d2e6cc6475346f2fef256124e37f70514f0b98e/spock-specs/src/test/groovy/org/spockframework/docs/datadriven/v5/MathSpec.groovy#dgTIqWleyl" target="_blank" class="cta-button cta-primary">
+        <a href="https://groovyconsole.dev/?g=groovy_4_0&gist=437e9026ff86d2d709c2c56eb7e2eef1#g8qcDpYAQE" target="_blank" class="cta-button cta-primary">
             Try it online
         </a>
         <a href="http://docs.spockframework.org" target="_blank" class="cta-button cta-secondary">
@@ -266,18 +204,154 @@
 </div>
 </section>
 
-<section class="py-12">
-    <div class="container mx-auto px-6 text-center text-gray-400 text-sm additional-links flex flex-wrap justify-center items-center gap-y-2">
-        <a href="https://spockframework.org/spock/javadoc/current" target="_blank" class="hover-underline-animation mx-3"><span class="link-separator">Javadoc</span></a>
-        <a href="https://github.com/spockframework/spock" target="_blank" class="hover-underline-animation mx-3"><span class="link-separator">Source Code</span></a>
-        <a href="https://github.com/spockframework/spock/issues" target="_blank" class="hover-underline-animation mx-3"><span class="link-separator">Issue Tracker</span></a>
-        <a href="https://github.com/spockframework/spock/discussions" target="_blank" class="hover-underline-animation mx-3"><span class="link-separator">Discussions</span></a>
-        <a href="https://gitter.im/spockframework/spock" target="_blank" class="hover-underline-animation mx-3"><span class="link-separator">Chat</span></a>
+
+<section class="py-16 md:py-24 bg-gray-800">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-100" data-aos="fade-up">
+            Why Choose Spock?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Expressive Specifications</h3>
+                <p class="text-gray-300">Write tests that are easy to read and understand, even for non-programmers.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+                <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8" /></svg>
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Powerful Mocking</h3>
+                <p class="text-gray-300">Create flexible and powerful mocks and stubs with built-in support.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">JUnit Platform</h3>
+                <p class="text-gray-300">Seamless integration with JUnit Platform and build tools.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
+                <svg viewBox="0 0 24 24"><path d="M3 3h18v6H3zM3 15h18v6H3z" /><path d="M9 9v6" /></svg>
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Data-Driven Testing</h3>
+                <p class="text-gray-300">Easily run the same test with different sets of data.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8 22 9 17 14 18 21 12 18 6 21 7 14 2 9 9 8 12 2" /></svg>
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Groovy DSL</h3>
+                <p class="text-gray-300">Leverage the power and flexibility of the Groovy language.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="350">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 12l2 2 4-4" /></svg>
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Built-in Matchers</h3>
+                <p class="text-gray-300">Use a rich set of matchers to verify expectations with clarity.</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<footer class="py-8 text-center text-gray-400 text-sm bg-gray-800">
-<div class="container mx-auto px-6">
+<section class="py-16 md:py-24"> <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-100" data-aos="fade-up">
+        See How Readable Tests Can Be
+    </h2>
+    <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <pre><code class="language-groovy"><span class="comment">// CalculatorSpec.groovy</span>
+<span class="keyword">import</span> spock.lang.Specification
+
+<span class="keyword">class</span> <span class="class-name">CalculatorSpec</span> <span class="keyword">extends</span> Specification {
+
+    <span class="keyword">def</span> <span class="string">"Test calculate method: #a #operation #b = #expectedResult"</span>() {
+        <span class="keyword">given:</span> <span class="comment">"A calculator instance"</span>
+        <span class="keyword">def</span> calculator = <span class="keyword">new</span> <span class="class-name">Calculator</span>()
+
+        <span class="keyword">when:</span> <span class="comment">"Perform the calculation"</span>
+        <span class="keyword">int</span> result = calculator.calculate(a, b, operation)
+
+        <span class="keyword">then:</span> <span class="comment">"The result should match the expected value"</span>
+        result == expectedResult
+
+        <span class="keyword">where:</span> <span class="comment">"Define test data"</span>
+        a  | b  | operation || expectedResult
+        <span class="number">1</span>  | <span class="number">2</span>  | <span class="string">"+"</span>       || <span class="number">3</span>
+        <span class="number">5</span>  | <span class="number">3</span>  | <span class="string">"-"</span>       || <span class="number">2</span>
+        <span class="number">4</span>  | <span class="number">2</span>  | <span class="string">"*"</span>       || <span class="number">8</span>
+        <span class="number">10</span> | <span class="number">2</span>  | <span class="string">"/"</span>       || <span class="number">5</span>
+        <span class="number">-1</span> | <span class="number">1</span>  | <span class="string">"+"</span>       || <span class="number">0</span>
+        <span class="number">1</span>  | <span class="number">-1</span> | <span class="string">"-"</span>       || <span class="number">2</span>
+        <span class="number">-2</span> | <span class="number">-2</span> | <span class="string">"*"</span>       || <span class="number">4</span>
+        <span class="number">-4</span> | <span class="number">-2</span> | <span class="string">"/"</span>       || <span class="number">2</span>
+    }
+
+    <span class="keyword">def</span> <span class="string">"Test calculate method with division by zero"</span>() {
+        <span class="keyword">given:</span> <span class="comment">"A calculator instance"</span>
+        <span class="keyword">def</span> calculator = <span class="keyword">new</span> <span class="class-name">Calculator</span>()
+
+        <span class="keyword">when:</span> <span class="comment">"Perform division by zero"</span>
+        calculator.calculate(<span class="number">10</span>, <span class="number">0</span>, <span class="string">"/"</span>)
+
+        <span class="keyword">then:</span> <span class="comment">"An IllegalArgumentException is thrown"</span>
+        <span class="keyword">def</span> exception = thrown(<span class="class-name">IllegalArgumentException</span>)
+
+        <span class="keyword">and:</span> <span class="comment">"The exception message is correct"</span>
+        exception.message == <span class="string">"Cannot divide by zero"</span>
+    }
+
+    <span class="keyword">def</span> <span class="string">"Test calculate method with invalid operation"</span>() {
+        <span class="keyword">given:</span> <span class="comment">"A calculator instance"</span>
+        <span class="keyword">def</span> calculator = <span class="keyword">new</span> <span class="class-name">Calculator</span>()
+
+        <span class="keyword">when:</span> <span class="comment">"Perform calculation with invalid operation"</span>
+        calculator.calculate(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"**"</span>)
+
+        <span class="keyword">then:</span> <span class="comment">"An IllegalArgumentException is thrown"</span>
+        <span class="keyword">def</span> exception = thrown(<span class="class-name">IllegalArgumentException</span>)
+
+        <span class="keyword">and:</span> <span class="comment">"The exception message is correct"</span>
+        exception.message == <span class="string">"Invalid operation: **"</span>
+    }
+}
+
+
+<span class="comment">// Calculator.groovy</span>
+<span class="keyword">class</span> <span class="class-name">Calculator</span> {
+<span class="comment">    /**
+     * Performs arithmetic operations on two integers.
+     *
+     * <span class="annotation">@param</span> a         The first integer.
+     * <span class="annotation">@param</span> b         The second integer.
+     * <span class="annotation">@param</span> operation The operation to perform (+, -, *, /).
+     * <span class="annotation">@return</span> The result of the operation.
+     * <span class="annotation">@throws</span> IllegalArgumentException if the operation is invalid or division by zero is attempted.
+     */</span>
+    <span class="keyword">int</span> calculate(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="class-name">String</span> operation) {
+        <span class="keyword">switch</span> (operation) {
+            <span class="keyword">case</span> <span class="string">"+"</span>: <span class="keyword">return</span> a + b
+            <span class="keyword">case</span> <span class="string">"-"</span>: <span class="keyword">return</span> a - b
+            <span class="keyword">case</span> <span class="string">"*"</span>: <span class="keyword">return</span> a * b
+            <span class="keyword">case</span> <span class="string">"/"</span>:
+                <span class="keyword">if</span> (b == <span class="number">0</span>) {
+                    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="class-name">IllegalArgumentException</span>(<span class="string">"Cannot divide by zero"</span>)
+                }
+                <span class="keyword">return</span> a / b
+            <span class="keyword">default</span>:
+                <span class="keyword">throw</span> <span class="keyword">new</span> <span class="class-name">IllegalArgumentException</span>(<span class="string">"Invalid operation: "</span> + operation)
+        }
+    }
+}
+</code></pre>
+        <p class="text-center text-gray-400 mt-6" data-aos="fade-up" data-aos-delay="200">
+            Spock's clear <code class="inline-code">given:</code>, <code class="inline-code">when:</code>, <code class="inline-code">then:</code> blocks make understanding test logic intuitive.
+        </p>
+    </div>
+</div>
+</section>
+
+<section class="py-12 bg-gray-800"> <div class="container mx-auto px-6 text-center text-gray-400 text-sm additional-links flex flex-wrap justify-center items-center gap-y-2">
+    <a href="https://spockframework.org/spock/javadoc/current" class="hover-underline-animation mx-3"><span class="link-separator">Javadoc</span></a>
+    <a href="https://github.com/spockframework/spock" class="hover-underline-animation mx-3"><span class="link-separator">Source Code</span></a>
+    <a href="https://github.com/spockframework/spock/issues" class="hover-underline-animation mx-3"><span class="link-separator">Issue Tracker</span></a>
+    <a href="https://github.com/spockframework/spock/discussions" class="hover-underline-animation mx-3"><span class="link-separator">Discussions</span></a>
+    <a href="https://gitter.im/spockframework/spock" class="hover-underline-animation mx-3"><span class="link-separator">Discussion Chat</span></a>
+</div>
+</section>
+
+<footer class="py-8 text-center text-gray-400 text-sm">
+    <div class="container mx-auto px-6">
         &copy; 2025 Spock Framework Team. All rights reserved.
     </div>
 </footer>
