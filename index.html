@@ -256,7 +256,7 @@
         See How Readable Tests Can Be
     </h2>
     <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                <pre><code class="language-groovy"><span class="comment">// CalculatorSpec.groovy</span>
+            <pre><code class="language-groovy"><span class="comment">// CalculatorSpec.groovy</span>
 <span class="keyword">import</span> spock.lang.Specification
 
 <span class="keyword">class</span> <span class="class-name">CalculatorSpec</span> <span class="keyword">extends</span> Specification {
@@ -265,11 +265,8 @@
         <span class="keyword">given:</span> <span class="comment">"A calculator instance"</span>
         <span class="keyword">def</span> calculator = <span class="keyword">new</span> <span class="class-name">Calculator</span>()
 
-        <span class="keyword">when:</span> <span class="comment">"Perform the calculation"</span>
-        <span class="keyword">int</span> result = calculator.calculate(a, b, operation)
-
-        <span class="keyword">then:</span> <span class="comment">"The result should match the expected value"</span>
-        result == expectedResult
+        <span class="keyword">expect:</span> <span class="comment">"The calculation should match the expected value"</span> <span class="comment">// Changed from when/then</span>
+        calculator.calculate(a, b, operation) == expectedResult
 
         <span class="keyword">where:</span> <span class="comment">"Define test data"</span>
         a  | b  | operation || expectedResult
@@ -281,6 +278,7 @@
         <span class="number">1</span>  | <span class="number">-1</span> | <span class="string">"-"</span>       || <span class="number">2</span>
         <span class="number">-2</span> | <span class="number">-2</span> | <span class="string">"*"</span>       || <span class="number">4</span>
         <span class="number">-4</span> | <span class="number">-2</span> | <span class="string">"/"</span>       || <span class="number">2</span>
+        <span class="number">1</span>  | <span class="number">1</span>  | <span class="string">"+"</span>       || <span class="number">42</span> <span class="comment">// A failing test case</span>
     }
 
     <span class="keyword">def</span> <span class="string">"Test calculate method with division by zero"</span>() {
@@ -338,12 +336,41 @@
                 <span class="keyword">throw</span> <span class="keyword">new</span> <span class="class-name">IllegalArgumentException</span>(<span class="string">"Invalid operation: "</span> + operation)
         }
     }
+
+    <span class="class-name">String</span> toString() {
+        <span class="keyword">return</span> <span class="string">"Calc"</span>
+    }
 }
 </code></pre>
         <p class="text-center text-gray-400 mt-6" data-aos="fade-up" data-aos-delay="200">
             Spock's clear <code class="inline-code">given:</code>, <code class="inline-code">when:</code>, <code class="inline-code">then:</code> blocks make understanding test logic intuitive.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8" data-aos="fade-up" data-aos-delay="200">
+        <div class="mt-12" data-aos="fade-up" data-aos-delay="500">
+            <h3 class="text-xl font-semibold text-center mb-4 text-gray-100">Example Test Output:</h3>
+            <pre>╷
+└─ Spock ✔
+   └─ CalculatorSpec ✔
+      ├─ Test calculate method: #a #operation #b = #expectedResult ✔
+      │  ├─ Test calculate method: 1 + 2 = 3 ✔
+      │  ├─ Test calculate method: 5 - 3 = 2 ✔
+      │  ├─ Test calculate method: 4 * 2 = 8 ✔
+      │  ├─ Test calculate method: 10 / 2 = 5 ✔
+      │  ├─ Test calculate method: -1 + 1 = 0 ✔
+      │  ├─ Test calculate method: 1 - -1 = 2 ✔
+      │  ├─ Test calculate method: -2 * -2 = 4 ✔
+      │  ├─ Test calculate method: -4 / -2 = 2 ✔
+      │  └─ Test calculate method: 1 + 1 = 42 ✘ Condition not satisfied:
+      │
+      │           calculator.calculate(a, b, operation) == expectedResult
+      │           |          |         |  |  |          |  |
+      │           Calc       2         1  1  +          |  42
+      │                                                 false
+      ├─ Test calculate method with division by zero ✔
+      └─ Test calculate method with invalid operation ✔</pre>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8" data-aos="fade-up" data-aos-delay="800">
             <a href="https://groovyconsole.dev/?g=groovy_4_0&gist=437e9026ff86d2d709c2c56eb7e2eef1#g8qcDpYAQE" target="_blank" class="cta-button cta-primary">
                 Try it online
             </a>
