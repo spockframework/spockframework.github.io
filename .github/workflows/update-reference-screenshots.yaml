@@ -9,6 +9,9 @@ permissions:
 jobs:
     update-screenshots:
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ./spock-website
         steps:
             -   name: Checkout
                 uses: actions/checkout@v4
@@ -31,7 +34,7 @@ jobs:
                 run: |
                     git config user.email "dev@forum.spockframework.org"
                     git config user.name "Spock Framework Robot"
-                    git add spock-website/tests/__screenshots__/
+                    git add tests/__screenshots__/
                     if [[ -n "$(git status --porcelain)" ]]; then
                         echo "::set-output name=has_changes::true"
                         git commit -m "Update reference screenshots"
