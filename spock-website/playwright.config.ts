@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-    reporter: process.env.CI ? ['github', 'html'] : 'html',
+    reporter: process.env.CI ? [['github'], ['html']] : [['html'], ['list']],
     // Configure projects for major browsers.
     projects: [
         {
