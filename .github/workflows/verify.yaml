@@ -9,11 +9,43 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v4
+
+            -   name: Verify LFS files
+                run: |
+                    git lfs install
+                    git lfs fsck --pointers HEAD
+
+            -   name: Set up Node
+                uses: actions/setup-node@v4
+                with:
+                    node-version: lts/*
+                    cache: 'npm'
+
+            -   name: Install dependencies
+                run: npm ci
+
+            -   name: Build
+                run: npm run build
+
+            -   name: Upload artifact
+                uses: 'actions/upload-artifact@v4'
+                with:
+                    name: 'gh-pages-preview'
+                    path: './spock-website/dist'
+
     verify:
         runs-on: ubuntu-latest
         steps:
             -   name: Checkout
                 uses: actions/checkout@v4
+                with:
+                    lfs: true # Download LFS files for screenshots
+
             -   name: Set up Node
                 uses: actions/setup-node@v4
                 with:
@@ -21,10 +53,13 @@ jobs:
                     cache: 'npm'
             -   name: Install dependencies
                 run: npm ci
-            -   name: Build
-                run: npm run build
-            -   name: Upload artifact
-                uses: 'actions/upload-artifact@v4'
+
+            -   name: Run Playwright Tests
+                run: npx playwright test
+
+            -   name: Upload Test Results (optional)
+                uses: actions/upload-artifact@v4
+                if: always()
                 with:
-                    name: 'gh-pages-preview'
-                    path: './spock-website/dist'
+                    name: playwright-report
+                    path: spock-website/playwright-report/
