@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* Custom styles - Dark theme is now default */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Dark mode defaults */
+    background-color: #111827; /* Darker gray background */
+    color: #d1d5db; /* Lighter gray text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Spock primary color variable */
+:root {
+    --spock-blue: #1562ae;
+    --spock-blue-dark-text: #60a5fa; /* Lighter blue for text/links in dark */
+}
+.spock-blue-bg { background-color: var(--spock-blue); }
+/* Use the lighter blue for text elements in dark mode */
+.spock-blue-text { color: var(--spock-blue-dark-text); }
+.spock-blue-border { border-color: var(--spock-blue-dark-text); } /* Use lighter blue for borders */
+
+/* Style for code block */
+pre {
+    background-color: #2d3748; /* Dark background for code */
+    color: #e2e8f0; /* Light text for code */
+    padding: 1.5rem;
+    border-radius: 0.5rem; /* Rounded corners */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+/* Syntax highlighting colors */
+code .keyword { color: #9ae6b4; } /* Green */
+code .string { color: #fbd38d; } /* Orange */
+code .comment { color: #a0aec0; } /* Gray */
+code .class-name { color: #faf089; } /* Yellow */
+code .number { color: #fca5a5; } /* Red */
+
+/* Style for inline code elements within regular text */
+.inline-code {
+    color: #cbd5e1; /* Slightly lighter gray for inline code */
+    background-color: #374151; /* Slightly lighter dark background */
+    padding: 0.1em 0.4em;
+    border-radius: 0.25rem;
+    font-size: 0.875em; /* Slightly smaller font size */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Button Styling */
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+/* Primary Button */
+.cta-primary {
+    background-color: var(--spock-blue); /* Original blue for background */
+    color: white;
+}
+.cta-primary:hover {
+    background-color: #115192; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(21, 98, 174, 0.3);
+}
+
+/* Secondary Button */
+.cta-secondary {
+    background-color: transparent;
+    color: var(--spock-blue-dark-text); /* Lighter blue text */
+    border-color: var(--spock-blue-dark-text); /* Lighter blue border */
+}
+/* Dark mode secondary button hover */
+.cta-secondary:hover {
+    background-color: rgba(59, 130, 246, 0.2); /* Lighter blue tint for dark bg */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.1);
+}
+
+/* Tertiary Button */
+.cta-tertiary {
+    background-color: #374151; /* Dark gray background */
+    color: #d1d5db; /* Light gray text */
+}
+.cta-tertiary:hover {
+    background-color: #4b5563; /* Slightly lighter dark gray on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Simple underline animation for links */
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: var(--spock-blue-dark-text); /* Lighter blue for dark mode */
+    transition: color 0.3s ease;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--spock-blue-dark-text); /* Lighter blue underline */
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out, background-color 0.3s ease;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Feature Card Styling */
+.feature-card {
+    background-color: #374151; /* Changed from #1f2937 for better contrast vs bg-gray-800 */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+
+.feature-card svg {
+    height: 40px;
+    margin-bottom: 1rem;
+    fill: none;
+    stroke: var(--spock-blue);
+    stroke-width: 2;
+}
+
+/* Additional Links Separator */
+.link-separator {
+    margin-left: 0.75rem; /* mx-3 */
+    margin-right: 0.75rem; /* mx-3 */
+    color: #4b5563; /* gray-600 */
+}
