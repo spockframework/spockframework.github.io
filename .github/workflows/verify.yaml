@@ -28,6 +28,7 @@ jobs:
                 with:
                     node-version: lts/*
                     cache: 'npm'
+                    cache-dependency-path: spock-website/package-lock.json
 
             -   name: Install dependencies
                 run: npm ci
@@ -57,6 +58,7 @@ jobs:
                 with:
                     node-version: lts/*
                     cache: 'npm'
+                    cache-dependency-path: spock-website/package-lock.json
 
             -   name: Install dependencies
                 run: npm ci
