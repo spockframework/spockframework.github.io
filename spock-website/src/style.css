@@ -128,7 +128,7 @@ code .number { color: #fca5a5; } /* Red */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .feature-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
 }
 
