@@ -16,7 +16,7 @@ jobs:
                 working-directory: ./spock-website
         steps:
             -   name: Checkout
-                uses: actions/checkout@v4
+                uses: actions/checkout@v6
 
             -   name: Verify LFS files
                 run: |
@@ -24,7 +24,7 @@ jobs:
                     git lfs fsck --pointers HEAD
 
             -   name: Set up Node
-                uses: actions/setup-node@v4
+                uses: actions/setup-node@v6
                 with:
                     node-version: lts/*
                     cache: 'npm'
@@ -37,7 +37,7 @@ jobs:
                 run: npm run build
 
             -   name: Upload artifact
-                uses: 'actions/upload-artifact@v4'
+                uses: actions/upload-artifact@v5
                 with:
                     name: 'gh-pages-preview'
                     path: './spock-website/dist'
@@ -49,12 +49,12 @@ jobs:
                 working-directory: ./spock-website
         steps:
             -   name: Checkout
-                uses: actions/checkout@v4
+                uses: actions/checkout@v6
                 with:
                     lfs: true # Download LFS files for screenshots
 
             -   name: Set up Node
-                uses: actions/setup-node@v4
+                uses: actions/setup-node@v6
                 with:
                     node-version: lts/*
                     cache: 'npm'
@@ -67,7 +67,7 @@ jobs:
                 run: npx playwright test
 
             -   name: Upload Test Results (optional)
-                uses: actions/upload-artifact@v4
+                uses: actions/upload-artifact@v5
                 if: always()
                 with:
                     name: playwright-report
