@@ -75,3 +75,6 @@ jobs:
                 with:
                     name: playwright-report
                     path: spock-website/playwright-report/
+
+            -  name: Check for broken links
+               run: npx linkinator ./dist/

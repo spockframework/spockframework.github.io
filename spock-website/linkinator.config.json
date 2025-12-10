@@ -1,0 +1,4 @@
+{
+    "skip": ["search.maven.org"],
+    "timeout": 5000
+}
