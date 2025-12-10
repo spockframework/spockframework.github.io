@@ -14,12 +14,12 @@ jobs:
                 working-directory: ./spock-website
         steps:
             -   name: Checkout
-                uses: actions/checkout@v4
+                uses: actions/checkout@v6
                 with:
                     lfs: true # Download LFS files for screenshots
 
             -   name: Set up Node
-                uses: actions/setup-node@v4
+                uses: actions/setup-node@v6
                 with:
                     node-version: lts/*
                     cache: 'npm'
