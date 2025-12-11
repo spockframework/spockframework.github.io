@@ -46,11 +46,25 @@ jobs:
         runs-on: ubuntu-latest
         container:
             image: mcr.microsoft.com/playwright:v1.57.0-noble
-            options: --user 1001
+            options: --user 0 # Run as root to allow installation of git-lfs
         defaults:
             run:
                 working-directory: ./spock-website
         steps:
+            # Unlike the default image, the playwright image does not have git-lfs installed
+            -   name: Install git-lfs and switch to non-root user
+                run: |
+                    apt-get update
+                    apt-get install -y git-lfs
+                    echo "Fixing permissions for non-root user and switching user"
+                    chown -R 1001:1001 .
+                    pwd
+                    ls -al
+                    su - $(id -un 1001)
+                    pwd
+                    ls -al
+                working-directory: ./ # the default only exists after checkout
+
             -   name: Checkout
                 uses: actions/checkout@v6
                 with:
@@ -68,6 +82,8 @@ jobs:
 
             -   name: Run Playwright Tests
                 run: npx playwright test
+                env:
+                    HOME: /root # Firefox is unable to launch if the $HOME folder isn't owned by the current user. This is a workaround for running in a container.
 
             -   name: Upload Test Results (optional)
                 uses: actions/upload-artifact@v5
