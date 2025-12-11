@@ -42,7 +42,32 @@ jobs:
                     name: 'gh-pages-preview'
                     path: './spock-website/dist'
 
-    verify:
+    link-check:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ./spock-website
+        steps:
+        -   name: Checkout
+            uses: actions/checkout@v6
+
+        -   name: Set up Node
+            uses: actions/setup-node@v6
+            with:
+                node-version: 24 # LTS
+                cache: 'npm'
+                cache-dependency-path: spock-website/package-lock.json
+
+        -   name: Install dependencies
+            run: npm ci
+
+        -   name: Build
+            run: npm run build
+
+        -   name: Check for broken links
+            run: npx linkinator ./dist/
+
+    visual-regression-tests:
         runs-on: ubuntu-latest
         container:
             image: mcr.microsoft.com/playwright:v1.57.0-noble
@@ -56,13 +81,7 @@ jobs:
                 run: |
                     apt-get update
                     apt-get install -y git-lfs
-                    echo "Fixing permissions for non-root user and switching user"
-                    chown -R 1001:1001 .
-                    pwd
-                    ls -al
                     su - $(id -un 1001)
-                    pwd
-                    ls -al
                 working-directory: ./ # the default only exists after checkout
 
             -   name: Checkout
@@ -83,7 +102,9 @@ jobs:
             -   name: Run Playwright Tests
                 run: npx playwright test
                 env:
-                    HOME: /root # Firefox is unable to launch if the $HOME folder isn't owned by the current user. This is a workaround for running in a container.
+                    # Firefox is unable to launch if the $HOME folder isn't owned by the current user.
+                    # This is a workaround for running in a container.
+                    HOME: /root
 
             -   name: Upload Test Results (optional)
                 uses: actions/upload-artifact@v5
@@ -91,6 +112,3 @@ jobs:
                 with:
                     name: playwright-report
                     path: spock-website/playwright-report/
-
-            -  name: Check for broken links
-               run: npx linkinator ./dist/
