@@ -9,6 +9,9 @@ permissions:
 jobs:
     update-screenshots:
         runs-on: ubuntu-latest
+        container:
+            image: mcr.microsoft.com/playwright:v1.57.0-noble
+            options: --user 1001
         defaults:
             run:
                 working-directory: ./spock-website
@@ -21,15 +24,12 @@ jobs:
             -   name: Set up Node
                 uses: actions/setup-node@v6
                 with:
-                    node-version: lts/*
+                    node-version: 24 # LTS
                     cache: 'npm'
                     cache-dependency-path: spock-website/package-lock.json
 
             -   name: Install dependencies
                 run: npm ci
-
-            -   name: Install Playwright Browsers
-                run: npx playwright install
 
             -   name: Run Playwright Tests updating snapshots
                 run: npx playwright test --update-snapshots

@@ -37,7 +37,7 @@ jobs:
             -   name: Set up Node
                 uses: actions/setup-node@v6
                 with:
-                    node-version: lts/*
+                    node-version: 24 # LTS
                     cache: 'npm'
                     cache-dependency-path: spock-website/package-lock.json
 
