@@ -175,7 +175,7 @@
         calculator.calculate(<span class="number">10</span>, <span class="number">0</span>, <span class="string">"/"</span>)
 
         <span class="keyword">then:</span> <span class="comment">"An IllegalArgumentException is thrown"</span>
-        <span class="keyword">def</span> exception = thrown(<span class="class-name">IllegalArgumentException</span>)
+        <span class="class-name">IllegalArgumentException</span> exception = thrown()
 
         <span class="keyword">and:</span> <span class="comment">"The exception message is correct"</span>
         exception.message == <span class="string">"Cannot divide by zero"</span>
@@ -189,7 +189,7 @@
         calculator.calculate(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"**"</span>)
 
         <span class="keyword">then:</span> <span class="comment">"An IllegalArgumentException is thrown"</span>
-        <span class="keyword">def</span> exception = thrown(<span class="class-name">IllegalArgumentException</span>)
+        <span class="class-name">IllegalArgumentException</span> exception = thrown()
 
         <span class="keyword">and:</span> <span class="comment">"The exception message is correct"</span>
         exception.message == <span class="string">"Invalid operation: **"</span>
