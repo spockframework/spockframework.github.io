@@ -7,12 +7,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "playwright test",
-    "update-snapshots": "playwright test --update-snapshots",
     "check-links": "linkinator"
   },
   "devDependencies": {
-    "@playwright/test": "^1.57.0",
+    "@playwright/test": "1.57.0",
     "@types/aos": "^3.0.7",
     "linkinator": "^7.5.1",
     "typescript": "~5.9.3",
