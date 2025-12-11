@@ -15,6 +15,7 @@ export default defineConfig({
     ],
     // Single template for all assertions
     testDir: 'tests',
+    timeout: 30000, // 30 seconds
     snapshotPathTemplate: '{testDir}/__screenshots__{/projectName}/{testFilePath}/{arg}{ext}',
     // Run local dev server before starting the tests.
     use: {
