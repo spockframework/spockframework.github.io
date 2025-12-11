@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "playwright test"
+    "test": "playwright test",
+    "update-snapshots": "playwright test --update-snapshots",
+    "check-links": "linkinator"
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",
