@@ -1,0 +1,34 @@
+# Spock Framework
+
+> Spock is an enterprise-ready specification and testing framework for Java and Groovy
+> applications. Its expressive, BDD-style specification language is highly readable,
+> with first-class data-driven testing, powerful built-in mocking/stubbing, and seamless
+> JUnit Platform integration so it runs anywhere JUnit does.
+
+Spock specifications are written in Groovy and run on the JVM. The reference documentation
+is versioned; the link below is a machine-readable index of every published version.
+
+## Documentation
+- [Reference documentation index](https://spockframework.org/spock/docs/llms.txt): machine-readable index of all documentation versions (latest stable + development snapshot) with a URL template for fetching individual pages as Markdown.
+- [Documentation home](https://spockframework.org/spock/docs/): latest reference documentation in the browser.
+- [API (Javadoc)](https://spockframework.org/spock/javadoc/current): API documentation for the current release.
+
+## Source & community
+- [GitHub repository](https://github.com/spockframework/spock): source code and issue tracker.
+- [Example project](https://github.com/spockframework/spock-example): runnable starter project for Gradle and Maven.
+- [Discussions](https://github.com/spockframework/spock/discussions): questions and announcements.
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/spock): community Q&A under the `spock` tag.
+
+## Optional
+- [Try Spock online](https://groovyconsole.dev/?g=groovy_4_0&gist=437e9026ff86d2d709c2c56eb7e2eef1): runnable example in the Groovy web console.
+- [Maven Central](https://search.maven.org/search?q=g:org.spockframework): released artifacts.
+
+## Modules
+- `spock-core`: the core specification framework — the only dependency most projects need.
+- `spock-bom`: bill of materials that aligns the versions of all Spock modules.
+- `spock-spring`: integration with Spring's TestContext framework, including Spring Boot test annotations such as `@SpringBootTest` and `@WebMvcTest`.
+- `spock-junit4`: support for JUnit 4 rules (`@Rule`/`@ClassRule`).
+- `spock-guice`: integration with the Guice dependency-injection container.
+- `spock-tapestry`: integration with the Tapestry5 inversion-of-control container.
+- `spock-unitils`: integration with the Unitils testing library.
+- `spock-testkit`: JUnit Platform Test Kit-based support for testing the Spock execution engine.
